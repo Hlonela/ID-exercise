@@ -1,4 +1,4 @@
-name = input("Enter your name: ")
+name = input("Enter your name: ") # The programme returns the name and surname of the person with the DOB (Date of Birth) through the person's ID number..
 surname = input("Enter your surname: ")
 id_num = input("Please enter your ID number: ") #The user ID is entered
 id_length_num = len(id_num) # The length of the ID is sought for
@@ -6,14 +6,14 @@ id_length_num = len(id_num) # The length of the ID is sought for
 if id_length_num == 13: #If the length is 13 digits, the code continues
     print("Name: "+ name)
     print("Surname: "+ surname)
-    id_year = id_num[:2]
+    id_year = id_num[:2] #To differentiate between the ones born during the 90s and the ones born during the 2000s.
     year_first = int (id_year[0])
     if year_first >= 0 and year_first <=1:
-        print("Year: "+ "20" + str (id_year))
+        print("Year: "+ "20" + str (id_year)) # The ones born during the 2000s
     elif year_first >1 and year_first <= 9:
-        print("Year: " + "19" + str(id_year))
+        print("Year: " + "19" + str(id_year)) # The ones born during the 90s
     id_month = int(id_num[2:4])
-    if id_month == 1:
+    if id_month == 1: # Displaying the month in word-form instead of returning the integers
         print("Month: " + "January")
     elif id_month == 2:
         print("Month: " + "February")
@@ -41,7 +41,7 @@ if id_length_num == 13: #If the length is 13 digits, the code continues
     print("Day: " + str(id_day))
     id_gender = id_num[6:10]
     gender_num = int(id_gender)
-    if gender_num >= 0000 and gender_num <= 4999:
+    if gender_num >= 0000 and gender_num <= 4999: # Whether the person is male or female, this is the deciding range...
         print("Gender: " + "FEMALE!")
     else:
         print("Gender: " + "MALE!")
