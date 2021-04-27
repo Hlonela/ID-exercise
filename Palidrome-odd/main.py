@@ -18,7 +18,7 @@ divided = enter_numbers % 2
 
 if divided == 0:
     print("Even Number!")
-else:
+else:s
     print("Odd Number!")
 
 
